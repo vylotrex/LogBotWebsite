@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LogBot – Discord Logging</title>
+  <meta name="description" content="LogBot: clean logging, helpful moderation and smart utilities for your Discord server. Fast, modern, reliable.">
+  <meta property="og:title" content="LogBot – Discord Logging, Moderation & Utilities">
+  <meta property="og:description" content="Add LogBot to your server and keep everything tidy.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://cdn.discordapp.com/app-icons/1404846518376071229/4164e7d483effbe64e4486f2b0b9566c.png?size=1024">
+  <meta property="og:url" content="https://example.com">
+  <link rel="icon" href="https://cdn.discordapp.com/app-icons/1404846518376071229/4164e7d483effbe64e4486f2b0b9566c.png?size=1024" />
+
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-[#0b0d12] text-slate-200 selection:bg-red-500/40 selection:text-white">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-[#0b0d12]/80 backdrop-blur">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+      <div class="flex items-center gap-24">
+        <span class="font-bold text-slate-100 text-lg">LogBot</span>
+        <nav class="hidden md:flex items-center gap-6">
+          <a href="#how" class="nav-link text-slate-300 hover:text-white">How it works</a>
+          <a href="#features" class="nav-link text-slate-300 hover:text-white">Features</a>
+          <a href="#comparison" class="nav-link text-slate-300 hover:text-white">Plans</a>
+          <a href="#commands" class="nav-link text-slate-300 hover:text-white">Commands</a>
+          <a href="#developer" class="nav-link text-slate-300 hover:text-white">Developer</a>
+        </nav>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="https://discord.com/oauth2/authorize?client_id=1404846518376071229&permissions=1135661764045904&integration_type=0&scope=bot+applications.commands" class="px-3 py-1.5 bg-indigo-600 text-white rounded hover:bg-indigo-500 transition">Add to Server</a>
+        <a href="https://ko-fi.com/draxylith" class="px-3 py-1.5 text-center rounded-md border border-amber-400/50 text-amber-300 hover:bg-amber-400 hover:text-black transition">Premium</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero" class="relative overflow-hidden">
+    <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(88,101,242,0.12),_transparent_60%)]"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div class="reveal">
+          <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
+            <span class="text-[#5865F2]">LogBot</span> - VC Logging
+          </h1>
+          <p class="mt-4 text-slate-300">
+            Built for voice channels: track joins, leaves and moves with clear embeds.
+          </p>
+          <div class="mt-8 flex flex-wrap items-center gap-3">
+            <a href="https://discord.com/oauth2/authorize?client_id=1404846518376071229&permissions=1135661764045904&integration_type=0&scope=bot+applications.commands" class="inline-flex items-center gap-2 rounded-lg bg-[#5865F2] hover:bg-[#4752C4] px-5 py-3 font-semibold shadow-[0_0_0_2px_rgba(88,101,242,.25),0_0_30px_rgba(239,68,68,.15)] transition">
+              Add to Server
+            </a>
+            <a href="#features" class="inline-flex items-center gap-2 rounded-lg border border-white/10 hover:bg-white/5 px-5 py-3 font-semibold">
+              Learn more
+            </a>
+          </div>
+          <div class="mt-6 flex items-center gap-4 text-sm text-slate-400">
+            <span>Simple</span>
+            <span>|</span>
+            <span>User-Friendly</span>
+            <span>|</span>
+            <span>Easy-To-Use</span>
+          </div>
+        </div>
+        <div class="reveal md:justify-self-end">
+          <div class="relative p-1 bg-gradient-to-br from-[#5865F2]/40 to-red-500/40 rounded-2xl animate-[floaty_4s_ease-in-out_infinite]">
+            <div class="rounded-2xl bg-[#0f131a] border border-white/5 p-6">
+              <img src="https://cdn.discordapp.com/app-icons/1404846518376071229/4164e7d483effbe64e4486f2b0b9566c.png?size=1024" alt="LogBot Logo" class="mx-auto h-28 w-28 rounded-2xl ring-4 ring-[#5865F2]/40 shadow-[0_0_0_2px_rgba(88,101,242,.25),0_0_30px_rgba(239,68,68,.15)]" />
+              <div class="mt-6 space-y-3">
+                <div class="flex items-center justify-between">
+                  <span class="text-sm text-slate-400">Version:</span>
+                  <span class="text-sm font-semibold">v1.0.0</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-sm text-slate-400">Status:</span>
+                  <span class="text-sm font-semibold text-green-400">Online</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- subtle moving blobs -->
+    <div class="pointer-events-none absolute -top-24 -left-24 w-80 h-80 rounded-full bg-[#5865F2]/20 blur-3xl animate-[floaty_4s_ease-in-out_infinite]"></div>
+    <div class="pointer-events-none absolute -bottom-24 -right-24 w-80 h-80 rounded-full bg-red-500/20 blur-3xl animate-[floaty_4s_ease-in-out_infinite] [animation-delay:1s]"></div>
+  </section>
+
+
+  <!-- How it works -->
+  <section id="how" class="py-16 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold">How it works</h2>
+      <div class="mt-6 grid gap-6 md:grid-cols-3">
+        <article class="rounded-xl bg-[#0f131a] border border-white/5 p-6">
+          <h3 class="font-semibold">1) Setup the Bot</h3>
+          <p class="mt-2 text-sm text-slate-300">Easy installation using the <code>/setup</code> command.</p>
+        </article>
+        <article class="rounded-xl bg-[#0f131a] border border-white/5 p-6">
+          <h3 class="font-semibold">2) Listen to Voice Channel Events</h3>
+          <p class="mt-2 text-sm text-slate-300">LogBot tracks VoiceChannel joins, leaves and moves between channels.</p>
+        </article>
+        <article class="rounded-xl bg-[#0f131a] border border-white/5 p-6">
+          <h3 class="font-semibold">3) Send clean embeds</h3>
+          <p class="mt-2 text-sm text-slate-300">Log channels receive tidy embeds. With all important information.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="py-16 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="reveal text-3xl font-bold">Why <span class="text-[#5865F2]">LogBot</span>?</h2>
+      <p class="reveal mt-2 text-slate-300">Everything you need to keep voice-channel activity transparent and auditable.</p>
+
+      <div class="mt-10 grid gap-6 md:grid-cols-3">
+        <article class="rounded-xl bg-[#0f131a] border border-white/5 p-6 hover:shadow-[0_0_0_2px_rgba(88,101,242,.25),0_0_30px_rgba(239,68,68,.15)] transition">
+          <h3 class="font-semibold">Voice-Channel Join/Leave/Move</h3>
+          <p class="mt-2 text-sm text-slate-300">Accurate logs with timestamp and user/channel context.</p>
+        </article>
+        <article class="rounded-xl bg-[#0f131a] border border-white/5 p-6 hover:shadow-[0_0_0_2px_rgba(88,101,242,.25),0_0_30px_rgba(239,68,68,.15)] transition">
+          <h3 class="font-semibold">Guided Setup</h3>
+          <p class="mt-2 text-sm text-slate-300">Use <code>/setup</code> to pick separate channels for Join, Leave and Move logs <strong>OR</strong> use an all-in-one channel.</p>
+        </article>
+        <article class="rounded-xl bg-[#0f131a] border border-white/5 p-6 hover:shadow-[0_0_0_2px_rgba(88,101,242,.25),0_0_30px_rgba(239,68,68,.15)] transition">
+          <h3 class="font-semibold">Searchable History</h3>
+          <p class="mt-2 text-sm text-slate-300">Use <code>/search</code> to list recent activity for a specific member.</p>
+        </article>
+        <article class="rounded-xl bg-[#0f131a] border border-white/5 p-6 hover:shadow-[0_0_0_2px_rgba(88,101,242,.25),0_0_30px_rgba(239,68,68,.15)] transition md:col-span-3">
+          <h3 class="font-semibold">Cleanup</h3>
+          <p class="mt-2 text-sm text-slate-300">Admins can <code>/clear</code> logs (for a single user or server-wide).</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison -->
+  <section id="comparison" class="py-16 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="reveal text-3xl font-bold text-center">Free or Plan?</h2>
+      <p class="reveal mt-2 text-slate-300 text-center max-w-2xl mx-auto">
+        See what you get with LogBot's free version and what others add on top.
+      </p>
+
+      <div class="mt-10 overflow-x-auto">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-white/5">
+              <th class="p-4 text-slate-300 font-semibold w-1/2">Feature</th>
+              <th class="p-4 text-center font-semibold w-1/6">Basic</th>
+              <th class="p-4 text-center font-semibold text-amber-300 w-1/6">Premium</th>
+              <th class="p-4 text-center font-semibold text-sky-300 w-1/6">Whitelabel</th>
+            </tr>
+          </thead>
+
+          <tbody class="divide-y divide-white/5">
+            <!-- Rows are rendered by assets/js/main.js via renderComparison() -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Commands -->
+  <section id="commands" class="py-16 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="reveal flex items-end justify-between gap-4 flex-wrap">
+        <div>
+          <h2 class="text-3xl font-bold">Commands</h2>
+          <p class="mt-2 text-slate-300">Filter by role or search directly.</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <div class="flex gap-2">
+            <button data-tag="all" class="role-chip active px-3 py-1.5 text-sm rounded-full border border-white/10 hover:bg-white/5">All</button>
+            <button data-tag="admin" class="role-chip px-3 py-1.5 text-sm rounded-full border border-red-500/40 text-red-400 hover:bg-red-500/10">Admin</button>
+            <button data-tag="whitelabel" class="role-chip px-3 py-1.5 text-sm rounded-full border border-sky-400/40 text-sky-300 hover:bg-sky-400/10">Whitelabel</button>
+            <button data-tag="premium" class="role-chip px-3 py-1.5 text-sm rounded-full border border-amber-400/40 text-amber-300 hover:bg-amber-400/10">Premium</button>
+            <button data-tag="user" class="role-chip px-3 py-1.5 text-sm rounded-full border border-emerald-400/40 text-emerald-300 hover:bg-emerald-400/10">User</button>
+          </div>
+          <div class="relative">
+            <input id="search" type="search" placeholder="Search /setup, /clear …" class="w-56 bg-[#0f131a] border border-white/10 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#5865F2]/50" />
+            <svg xmlns="http://www.w3.org/2000/svg" class="pointer-events-none absolute right-2 top-2.5 h-4 w-4 text-slate-400" viewBox="0 0 24 24" fill="currentColor"><path d="M21 20l-5.2-5.2a7 7 0 10-1.4 1.4L20 21zM5 10a5 5 0 1110 0A5 5 0 015 10z"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <div id="commands-list" class="mt-8 space-y-3"></div>
+    </div>
+  </section>
+
+  <!-- Developer -->
+  <section id="developer" class="py-16 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-10 items-center">
+      <div class="reveal">
+        <h2 class="text-3xl font-bold">About the Developer</h2>
+        <p class="mt-3 text-slate-300">
+          Hey! I’m <strong>draxylith</strong>, and LogBot is my <em>first public project.</em><br>
+          I built it to learn and expand my coding skills, as I’m a fully self-taught developer. <br>
+
+          This bot isn’t crammed with endless features — and that’s intentional. <br>
+          The market is flooded with all-purpose Discord bots,<br>
+          each loaded with so many functions that most people never even use. <br>
+
+          LogBot is different: it’s simple, compact, and focused entirely on one job — <br>
+          <strong>logging channel activities</strong>. <br>
+          And maybe, just maybe, that’s exactly what makes it better. :D
+        </p>
+        <ul class="mt-4 space-y-2 text-sm text-slate-300">
+          <li>• Focused on simplicity and user-friendlyness.</li>
+          <li>• Open to suggestions and feature requests.</li>
+          <li>• No functions locked behind a paywall, just quality-of-life features.</li>
+        </ul>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="https://discord.gg/kGvKzSzrS2HKHTzTqVPf" class="inline-flex items-center gap-2 rounded-lg border border-white/10 hover:bg-white/5 px-5 py-3 font-semibold">Contact me on Discord</a>
+          <a href="https://ko-fi.com/draxylith" target="_blank" class="inline-flex items-center gap-2 rounded-lg border border-amber-400/50 text-amber-300 hover:bg-amber-400 hover:text-black px-5 py-3 font-semibold">Support on Ko-fi</a>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="relative p-1 bg-gradient-to-br from-[#5865F2]/40 to-red-500/40 rounded-2xl">
+          <div class="rounded-2xl bg-[#0f131a] border border-white/5 p-6">
+            <div class="flex items-center gap-4">
+              <img src="https://cdn.discordapp.com/avatars/289397352043773964/a4dfba42eca1f52729cd05d32589e348?size=1024" alt="Avatar" class="h-16 w-16 rounded-xl ring-2 ring-white/10" />
+              <div>
+                <div class="font-semibold">Draxylith</div>
+                <div class="text-sm text-slate-400">Builder of LogBot</div>
+              </div>
+            </div>
+            <div class="mt-6 grid sm:grid-cols-3 gap-3 text-center">
+              <div class="rounded-lg border border-white/10 bg-white/5 p-3">
+                <div class="text-lg font-semibold">Self-Taught</div>
+                <div class="text-xs text-slate-400">On/Off learning since 2021</div>
+              </div>
+              <div class="rounded-lg border border-white/10 bg-white/5 p-3">
+                <div class="text-lg font-semibold">Passionate</div>
+                <div class="text-xs text-slate-400">Every project with heart</div>
+              </div>
+              <div class="rounded-lg border border-white/10 bg-white/5 p-3">
+                <div class="text-lg font-semibold">Friendly</div>
+                <div class="text-xs text-slate-400">Always offering support</div>
+              </div>
+            </div>
+            <p class="mt-4 text-sm text-slate-300">
+              "Coding is 1% writing code and 99% fixing it."
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-sm text-slate-400 flex flex-col md:flex-row items-center justify-between gap-3">
+      <span>© <span id="year"></span> LogBot</span>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
